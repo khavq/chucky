@@ -19,6 +19,6 @@ defmodule Chucky.Server do
       |> Enum.shuffle()
       |> List.first()
 
-      {:reply, random_fact, facts}
+    {:reply, "#{random_fact} - #{self()}", facts}
   end
 end
